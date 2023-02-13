@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ex.css" />
+    <title>Skydity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="header" id="header">
+      
+      <div class="main_content">
+        <div class="input">
+          <form action="">
+            <input type="text" placeholder="Search Cities" id="cityInput" class="q"/>
+            <button type="button" onclick="GetInfo()" id="keydown"">Go</button>  
+          </form>
+        </div>
+      </div>
+      <div class="center">
+        <div class="weather" id="weather">
+          <h1><span id="cityName">Delhi</span></h1>
+          <h4><span id="ptanhi">Cloudy weatehr</span></h4>
+          <p class="ans"><span id="temp">-5*C</span></p>
+          <h5>
+            Pressure: <span id="pres">1004</span> | Humidity:
+            <span id="humi">73*C</span>
+          </h5>
+          <div class="forecast">
+            <div class="grid-container" >
+              <div class="grid-item" id="a3">
+                <h4 id="x1">time</h4>
+                <br />
+                <img src="cloudy.png" alt="" id="y1" />
+                <br />
+                <h4><span id="z1">-5*C</span></h4>
+              </div>
+              <div class="grid-item">
+                <h4 id="x2">time</h4>
+                <br />
+                <img src="cloudy.png" alt="" id="y2"/>
+                <br />
+                <h4><span id="z2">-5*C</span></h4>
+              </div>
+              <div class="grid-item">
+                <h4 id="x3">time</h4>
+                <br />
+                <img src="cloudy.png" alt="" id="y3"/>
+                <br />
+                <h4><span id="z3">-5*C</span></h4>
+              </div>
+              <div class="grid-item" >
+                <h4 id="x4">time</h4>
+                <br />
+                <img src="cloudy.png" alt="" id="y4"/>
+                <br />
+                <h4><span id="z4">-5*C</span></h4>
+              </div>
+              <div class="grid-item" id="a1">
+                <h4 id="x5">time</h4>
+                <br />
+                <img src="cloudy.png" alt="" id="y5"/>
+                <br />
+                <h4><span id="z5">-5*C</span></h4>
+              </div>
+              <div class="grid-item"  id="a2">
+                <h4 id="x6">time</h4>
+                <br />
+                <img src="cloudy.png" alt="" id="y6"/>
+                <br />
+                <h4><span id="z6">-5*C</span></h4>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="predictor">
+            <div class="grid-container1">
+              <div class="grid-item1">
+                <h3>today</h3>
+                <br />
+                <img src="cloudy.png" alt="" />
+                <br />
+                <h4><span id="temp1">-5*C</span></h4>
+              </div>
+              <div class="grid-item1">
+                <h3>tommorow</h3>
+                <br />
+                <img src="cloudy.png" alt="" />
+                <br />
+                <h4><span id="temp1">-5*C</span></h4>
+              </div>
+              <div class="grid-item1">
+                <h3>Day after tommorrow</h3>
+                <br />
+                <img src="cloudy.png" alt="" />
+                <br />
+                <h4><span id="temp1">-5*C</span></h4>
+              </div>
+               <div class="grid-item1">
+                <h3>Day after tommorrow</h3>
+                <br />
+                <img src="cloudy.png" alt="" />
+                <br />
+                <h4><span id="temp1">-5*C</span></h4>
+              </div>
+            </div>
+          </div> -->
+          <div class="container1">
+            <h1>Weather forecast</h1>
+            <div class="box1">
+              <h3><span id="day1"></span></h3>
+              <br/>
+              <img src="cloudy.png" alt="" id="img1"/>
+              <br />
+              <h4>Min_Temp: <span id="day1min">-5*C</span></h4>
+              <h4>Max_Temp: <span id="day1max">-5*C</span></h4>
+            </div>
+            <div class="box2">
+              <h3><span id="day2"></span></h3>
+              <br/>
+              <img src="cloudy.png" alt="" id="img2"/>
+              <br />
+              <h4>Min_Temp: <span id="day2min">-5*C</span></h4>
+              <h4> Max_Temp: <span id="day2max">-5*C</span></h4>
+            </div>
+            <div class="box3">
+              <h3><span id="day3"></span></h3>
+              <br/>
+              <img src="cloudy.png" alt="" id="img3"/>
+              <br />
+              <h4>Min_Temp: <span id="day3min">-5*C</span></h4>
+              <h4>Max_Temp: <span id="day3max">-5*C</span></h4>
+            </div>
+            <div class="box4">
+              <h3><span id="day4"></span></h3>
+              <br/>
+              <img src="cloudy.png" alt="" id="img4"/>
+              <br />
+              <h4>Min_Temp: <span id="day4min">-5*C</span></h4>
+              <h4>Max_Temp: <span id="day4max">-5*C</span></h4>
+            </div>
+            <div class="box4">
+              <h3><span id="day5"></span></h3>
+              <br/>
+              <img src="cloudy.png" alt="" id="img5"/>
+              <br />
+              <h4>Min_Temp: <span id="day5min">-5*C</span></h4>
+              <h4>Max_Temp: <span id="day5max">-5*C</span></h4>
+            </div>
+          </div>
+          <button id="scroll-left" style="padding: 4px;"><-</button>
+          <button id="scroll-right" style="padding: 4px;">-></button>
+          
+        </div>
+
+      </div>
+    </section>
+    <section class="page2">
+        <div class="data">
+            <h1>Weather for other places</h1>
+            <table style="width:100%">
+              <tr>
+                  <th>CityName</th>
+                  <th>Descp</th>
+                  <th>population</th>
+                  <th>temp</th>
+              </tr>
+              <tr>
+                  <td>Kolkata</td>
+                  <td id="q1">CLEAR</td>
+                  <td id="pop1">24546523</td>
+                  <td id="q2">65</td>
+              </tr>
+              <tr>
+                <td>London</td>
+                <td id="b1">CLEAR</td>
+                <td id="pop2">456481</td>
+                <td id="b2">65</td>
+            </tr>
+              <tr>
+                  <td>Chicago</td>
+                  <td id="c1">CLEAR</td>
+                  <td id="pop3">3564512</td>
+                  <td id="c2">65</td>
+              </tr>
+              <tr>
+                <td>Paris</td>
+                <td id="d1">CLEAR</td>
+                <td id="pop4">445654841</td>
+                <td id="d2">65</td>
+            </tr>
+          </table>
+          <footer id="footer">
+            Made by Team Imsfg<3;
+          </footer>
+    </section>
+    <script src="ex.js"></script>
+  </body>
+</html>
