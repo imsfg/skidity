@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ROBOTO', cursive;
+}
+
+.header{
+    background: url(clouds.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 95vh;
+    min-width: 100%;
+    
+}
+.input button{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0);
+}
+.main_content{
+    margin: auto;
+    width: 55%;
+    text-align: center;
+    background-color: rgba(245, 245, 220, 0);
+}
+form{
+    padding-top: 10px;
+}
+input{
+    display: inline-block;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: wheat;
+    border: 2px solid black;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    color: black;
+    font-family: 'ROBOTO', cursive;
+}
+input[type=text]:focus{
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    box-shadow: 0 0 0 2px rgb(0, 0, 0); /* Full freedom. (works also with border-radius) */
+  }
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 55%;
+    border-radius: 10px;
+}
+
+
+  .weather{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.307),rgba(0, 0, 0, 0.416)),url(sk.png);
+    /* min-height: 500px; */
+    width: 100%;
+    color: white;
+    text-align: center;
+    /* min-width: 500px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1{
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .ans{
+    padding-top: 20px;
+    font-size: 50px;
+    padding-right: 15px;
+  }
+  .forecast{
+    border-top: 2px solid rgba(255, 255, 255, 0.281);
+    margin-top: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.281);
+  }
+
+  .grid-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    
+  }
+  .grid-item {
+    border-right: 2px solid rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: center;
+  }
+  img{
+    width: 50px;
+  }
+
+  .grid-container1 {
+    margin-top: 20px;
+    overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 400px 400px 400px 400px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% - 2rem);
+    
+  }
+    
+  .container1::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  table,
+    th,
+    td {
+        border: 1px solid wheat;
+        border-collapse: collapse;
+    }
+     
+    th,
+    td {
+        padding: 20px;
+    }
+     
+    th,td {
+        text-align: left;
+    }
+  .page2{
+    min-height: 100vh;
+    min-width: 100%;
+    background: rgb(0, 0, 0);
+    color: wheat;
+  }
+  .data{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top:125%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+
+  .container1 {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .box1, .box2, .box3, .box4 {
+    min-width: 50%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    
+    border-right: 2px dotted rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: center;
+  
+  }
+  
+  .container1 img{
+    width: 50px;
+  }
+
+.hii{
+  padding: 15px;
+}
+
+
+
+  .weather1{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: url(clear.gif);
+    min-height: 500px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    /* min-width: 500px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .header1{
+    background: url(clear.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100%;
+    
+}
+.weather2{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: url(thunderstorm.gif);
+  min-height: 500px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  /* min-width: 500px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header2{
+  background: url(thunderstorm.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100%;
+  
+}
+.weather3{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: url(rain.gif);
+  min-height: 500px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  /* min-width: 500px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header3{
+  background: url(rain.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100%;
+  
+}
+.weather4{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: url(snow.gif);
+  min-height: 500px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  /* min-width: 500px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header4{
+  background: url(snow.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100%;
+  
+}
+.weather5{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: url(clouds.gif);
+  min-height: 500px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  /* min-width: 500px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header5{
+  background: url(clouds.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100%;
+  
+}
+.weather6{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: url(fog.gif);
+  min-height: 500px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  /* min-width: 500px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header6{
+  background: url(fog.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100%;
+  
+}
+
+@media only screen and (max-width: 1120px) {
+ input{
+  padding: 2px;
+  width: 65%;
+ }
+}
+
+@media only screen and (max-width: 750px) {
+  .center{
+    width: 70%;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  h1{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .ans{
+    padding-top: 5px;
+    font-size: 30px;
+    padding-right: 0px;
+  }
+  #a1,#a2,#a3{
+    display: none;
+  }
+  .grid-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .grid-item {
+    border-right: 2px solid rgb(255, 255, 255);
+    font-size: 14px;
+    text-align: center;
+  }
+  .input button{
+    padding: 5px;
+  }
+ 
+  .data{
+    width: 95%;
+  }
+ }
+
+ @media only screen and (max-width: 442px){
+  th,
+  td {
+      padding: 5px;
+  }
+ } 
+
+ footer{
+  position: absolute;
+  top: 180%;
+ }
