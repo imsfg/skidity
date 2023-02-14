@@ -39,8 +39,8 @@ if (navigator.geolocation) {
                 document.getElementById("pres").innerHTML = data.list[0].main.pressure +" inHg";
                         document.getElementById("humi").innerHTML = data.list[0].main.humidity +"%";
                 if (data.list[0].weather[0].main=="Clear") {
-                    document.getElementById("weather").className = "weather1";
-                    document.getElementById("header").className = "header1";
+                    document.getElementById("weather").className = "weather0";
+                    document.getElementById("header").className = "header0";
                 } 
                 else if (data.list[0].weather[0].main=="Thunderstorm") {
                     document.getElementById("weather").className = "weather2";
