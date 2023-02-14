@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ex.css" />
     <title>Skydity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
         <div class="input">
           <form action="">
             <input type="text" placeholder="Search Cities" id="cityInput" class="q"/>
-            <button type="button" onclick="GetInfo()" id="keydown"">Go</button>  
+            <button type="button" onclick="GetInfo()" id="keydown""><i class="fa fa-search"></i></button>  
           </form>
         </div>
       </div>
@@ -151,8 +152,8 @@
               <h4>Max_Temp: <span id="day5max">-5*C</span></h4>
             </div>
           </div>
-          <button id="scroll-left" style="padding: 4px;"><-</button>
-          <button id="scroll-right" style="padding: 4px;">-></button>
+          <button id="scroll-left" style="padding: 4px; background:rgba(0, 0, 0, 0); border:none;"><i class="arrow left"></i></button>
+          <button id="scroll-right" style="padding: 4px;background:rgba(0, 0, 0, 0); border:none;"><i class="arrow right"></i></button>
           
         </div>
 

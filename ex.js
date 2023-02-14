@@ -92,9 +92,16 @@ if (navigator.geolocation) {
             for(i=0;i<6;i++){
                 document.getElementById("y"+(i+1)).src="http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon +".png";
             }
-              if (data.list[0].weather[0].main=="Clear") {
+            if (data.list[0].weather[0].main=="Clear") {
+                if (Number((data.list[0].dt_txt).slice(11,13))>18 ||Number((data.list[0].dt_txt).slice(11,13))<6 ) {
+                    document.getElementById("weather").className = "weather0";
+                    document.getElementById("header").className = "header0";
+                }
+                else{
                 document.getElementById("weather").className = "weather1";
                 document.getElementById("header").className = "header1";
+                }
+                
             } 
             else if (data.list[0].weather[0].main=="Thunderstorm") {
                 document.getElementById("weather").className = "weather2";
@@ -163,8 +170,15 @@ function GetInfo() {
             document.getElementById("pres").innerHTML = data.list[0].main.pressure +" inHg";
                     document.getElementById("humi").innerHTML = data.list[0].main.humidity +"%";
             if (data.list[0].weather[0].main=="Clear") {
+                if (Number((data.list[0].dt_txt).slice(11,13))>18 ||Number((data.list[0].dt_txt).slice(11,13))<6 ) {
+                    document.getElementById("weather").className = "weather0";
+                    document.getElementById("header").className = "header0";
+                }
+                else{
                 document.getElementById("weather").className = "weather1";
                 document.getElementById("header").className = "header1";
+                }
+                
             } 
             else if (data.list[0].weather[0].main=="Thunderstorm") {
                 document.getElementById("weather").className = "weather2";
