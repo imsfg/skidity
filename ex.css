@@ -31,10 +31,11 @@ input{
     font-size: 17px;
     background-color: rgb(255, 255, 255);
     border: none;
+    font-weight: 600;
     color: rgb(255, 255, 255);
     padding: 10px;
     color: black;
-    font-family: 'ROBOTO', cursive;
+    font-family: 'IBM Plex Mono', monospace;
 }
 input[type=text]:focus{
     outline: none;      /* Remove default outline and use border or box-shadow */

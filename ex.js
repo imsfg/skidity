@@ -17,10 +17,10 @@ if (navigator.geolocation) {
             .then(response => response.json())
             .then(data=>{
                 for(i=0;i<5;i++){
-                    document.getElementById("day"+(i+1)+"min").innerHTML="Min:"+Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
+                    document.getElementById("day"+(i+1)+"min").innerHTML=Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
                 }
                 for(i=0;i<5;i++){
-                    document.getElementById("day"+(i+1)+"max").innerHTML="Max:"+Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
+                    document.getElementById("day"+(i+1)+"max").innerHTML=Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
                 }
                 for(i=0;i<5;i++){
                     document.getElementById("img"+(i+1)).src="http://openweathermap.org/img/wn/" + data.list[i+(7*i)].weather[0].icon +".png";
@@ -82,10 +82,10 @@ if (navigator.geolocation) {
             document.getElementById("pres").innerHTML = data.list[0].main.pressure +"inHg";
             document.getElementById("humi").innerHTML = data.list[0].main.humidity +"%";
               for(i=0;i<5;i++){
-                  document.getElementById("day"+(i+1)+"min").innerHTML="Min:"+Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
+                  document.getElementById("day"+(i+1)+"min").innerHTML=Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
               }
               for(i=0;i<5;i++){
-                  document.getElementById("day"+(i+1)+"max").innerHTML="Max:"+Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
+                  document.getElementById("day"+(i+1)+"max").innerHTML=Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
               }
               for(i=0;i<5;i++){
                   document.getElementById("img"+(i+1)).src="http://openweathermap.org/img/wn/" + data.list[i+(7*i)].weather[0].icon +".png";
@@ -135,6 +135,67 @@ if (navigator.geolocation) {
         });
     });
   } 
+  else{
+    document.getElementById("cityName").innerHTML = "City:" + "New Delhi";
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=New Delhi&units=metric&appid=24dbfd6a85e374466b31f5579d96aa6f')
+    .then(response => response.json())
+    .then(data=>{
+        for(i=0;i<5;i++){
+            document.getElementById("day"+(i+1)+"min").innerHTML=Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
+        }
+        for(i=0;i<5;i++){
+            document.getElementById("day"+(i+1)+"max").innerHTML=Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
+        }
+        for(i=0;i<5;i++){
+            document.getElementById("img"+(i+1)).src="http://openweathermap.org/img/wn/" + data.list[i+(7*i)].weather[0].icon +".png";
+        }
+        for(i=0;i<6;i++){
+            document.getElementById("x"+(i+1)).innerHTML=(data.list[i].dt_txt).slice(10,19);
+        }
+        for(i=0;i<6;i++){
+            document.getElementById("z"+(i+1)).innerHTML=Number(data.list[i].main.temp).toFixed(1)+"°C";
+        }
+        for(i=0;i<6;i++){
+            document.getElementById("y"+(i+1)).src="http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon +".png";
+        }
+        document.getElementById("ptanhi").innerHTML = data.list[0].weather[0].description;
+        document.getElementById("temp").innerHTML = data.list[0].main.temp +"°C";
+        document.getElementById("pres").innerHTML = data.list[0].main.pressure +" inHg";
+                document.getElementById("humi").innerHTML = data.list[0].main.humidity +"%";
+                if (data.list[0].weather[0].main=="Clear") {
+                    if (Number((data.list[0].dt_txt).slice(11,13))>18 ||Number((data.list[0].dt_txt).slice(11,13))<6 ) {
+                        document.getElementById("weather").className = "weather0";
+                        document.getElementById("header").className = "header0";
+                    }
+                    else{
+                    document.getElementById("weather").className = "weather1";
+                    document.getElementById("header").className = "header1";
+                    }
+                    
+                } 
+        else if (data.list[0].weather[0].main=="Thunderstorm") {
+            document.getElementById("weather").className = "weather2";
+            document.getElementById("header").className = "header2";
+        } 
+        else if (data.list[0].weather[0].main=="Rain" || data.list[0].weather[0].main=="Drizzle") {
+            document.getElementById("weather").className = "weather3";
+            document.getElementById("header").className = "header3";
+        } 
+        else if (data.list[0].weather[0].main=="Snow") {
+            document.getElementById("weather").className = "weather4";
+            document.getElementById("header").className = "header4";
+        } 
+        else if (data.list[0].weather[0].main=="Clouds") {
+            document.getElementById("weather").className = "weather5";
+            document.getElementById("header").className = "header5";
+        } 
+        else if (data.list[0].weather[0].main=="Mist" || data.list[0].weather[0].main=="Smoke" || data.list[0].weather[0].main=="Haze" || data.list[0].weather[0].main=="Fog" || data.list[0].weather[0].main=="Dust" || data.list[0].weather[0].main=="Sand") {
+            document.getElementById("weather").className = "weather6";
+            document.getElementById("header").className = "header6";
+        } 
+        document.getElementById("cityInput").innerHTML="";
+    })
+  }
  
 document.addEventListener("keydown", (e) => {
     if (e.key == "Enter"){
@@ -155,10 +216,10 @@ function GetInfo() {
         .then(response => response.json())
         .then(data=>{
             for(i=0;i<5;i++){
-                document.getElementById("day"+(i+1)+"min").innerHTML="Min:"+Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
+                document.getElementById("day"+(i+1)+"min").innerHTML=Number(data.list[i +(7*i)].main.temp_min).toFixed(1)+"°";
             }
             for(i=0;i<5;i++){
-                document.getElementById("day"+(i+1)+"max").innerHTML="Max:"+Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
+                document.getElementById("day"+(i+1)+"max").innerHTML=Number(data.list[i +(7*i)].main.temp_max).toFixed(1)+"°";
             }
             for(i=0;i<5;i++){
                 document.getElementById("img"+(i+1)).src="http://openweathermap.org/img/wn/" + data.list[i+(7*i)].weather[0].icon +".png";
