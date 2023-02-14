@@ -38,10 +38,17 @@ if (navigator.geolocation) {
                 document.getElementById("temp").innerHTML = data.list[0].main.temp +"°C";
                 document.getElementById("pres").innerHTML = data.list[0].main.pressure +" inHg";
                         document.getElementById("humi").innerHTML = data.list[0].main.humidity +"%";
-                if (data.list[0].weather[0].main=="Clear") {
-                    document.getElementById("weather").className = "weather0";
-                    document.getElementById("header").className = "header0";
-                } 
+                        if (data.list[0].weather[0].main=="Clear") {
+                            if (Number((data.list[0].dt_txt).slice(11,13))>18 ||Number((data.list[0].dt_txt).slice(11,13))<6 ) {
+                                document.getElementById("weather").className = "weather0";
+                                document.getElementById("header").className = "header0";
+                            }
+                            else{
+                            document.getElementById("weather").className = "weather1";
+                            document.getElementById("header").className = "header1";
+                            }
+                            
+                        } 
                 else if (data.list[0].weather[0].main=="Thunderstorm") {
                     document.getElementById("weather").className = "weather2";
                     document.getElementById("header").className = "header2";
