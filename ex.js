@@ -43,7 +43,7 @@
           data.list[0].main.humidity + "%";
         if (data.list[0].weather[0].main == "Clear") {
           if (
-            Number(data.list[0].dt_txt.slice(11, 13)) > 18 ||
+            Number(data.list[0].dt_txt.slice(11, 13)) >= 18 ||
             Number(data.list[0].dt_txt.slice(11, 13)) < 6
           ) {
             document.getElementById("weather").className = "weather0";
@@ -150,7 +150,7 @@ if (navigator.geolocation) {
                 data.list[0].main.humidity + "%";
               if (data.list[0].weather[0].main == "Clear") {
                 if (
-                  Number(data.list[0].dt_txt.slice(11, 13)) > 18 ||
+                  Number(data.list[0].dt_txt.slice(11, 13)) >= 18 ||
                   Number(data.list[0].dt_txt.slice(11, 13)) < 6
                 ) {
                   document.getElementById("weather").className = "weather0";
@@ -235,7 +235,7 @@ if (navigator.geolocation) {
               }
               if (data.list[0].weather[0].main == "Clear") {
                 if (
-                  Number(data.list[0].dt_txt.slice(11, 13)) > 18 ||
+                  Number(data.list[0].dt_txt.slice(11, 13)) >= 18 ||
                   Number(data.list[0].dt_txt.slice(11, 13)) < 6
                 ) {
                   document.getElementById("weather").className = "weather0";
@@ -294,7 +294,7 @@ function GetInfo() {
   )
     .then((response) => {
       if (response.ok) {
-        cityName.innerHTML = "--" + newName.value + "--";
+        cityName.innerHTML = newName.value.toUpperCase();
         fetch(
           "https://api.openweathermap.org/data/2.5/forecast?q=" +
             newName.value +
@@ -341,7 +341,7 @@ function GetInfo() {
               data.list[0].main.humidity + "%";
             if (data.list[0].weather[0].main == "Clear") {
               if (
-                Number(data.list[0].dt_txt.slice(11, 13)) > 18 ||
+                Number(data.list[0].dt_txt.slice(11, 13)) >= 18 ||
                 Number(data.list[0].dt_txt.slice(11, 13)) < 6
               ) {
                 document.getElementById("weather").className = "weather0";
